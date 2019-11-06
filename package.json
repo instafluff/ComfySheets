@@ -1,0 +1,39 @@
+{
+  "name": "comfysheets",
+  "version": "1.0.0",
+  "description": "The Comfiest Way to Read from Google Sheets and Submit to Google Forms so that you can sleep soundly at night!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/instafluff/ComfySheets.git"
+  },
+  "keywords": [
+    "Instafluff",
+    "Comfy",
+    "Google",
+    "Sheets",
+    "Form",
+    "Data",
+    "Submit",
+    "Read",
+    "Spreadsheet",
+    "Holysheets"
+  ],
+  "author": "Instafluff",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/instafluff/ComfySheets/issues"
+  },
+  "homepage": "https://github.com/instafluff/ComfySheets#readme",
+  "dependencies": {
+    "gsheets": "^2.0.0",
+    "node-fetch": "^2.6.0",
+    "superagent": "^5.1.0"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0"
+  }
+}
