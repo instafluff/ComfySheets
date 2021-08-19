@@ -29,8 +29,7 @@
   },
   "homepage": "https://github.com/instafluff/ComfySheets#readme",
   "dependencies": {
-    "gsheets": "^2.0.0",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "superagent": "^5.1.0"
   },
   "devDependencies": {
