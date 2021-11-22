@@ -23,10 +23,10 @@ async function submitDataToForm( formId, data ) {
   }
 }
 
-async function getDataFromSheet( sheetId, sheetTitle, columnMap ) {
+async function getDataFromSheet( sheetId, sheetTitle, columnMap, pageId = null ) {
   try {
     // From : https://benborgers.com/posts/google-sheets-json (THANK YOU CarstenPet!)
-    let worksheetJson = await fetch(`https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?tqx=out:json`)
+    let worksheetJson = await fetch( `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?tqx=out:json${ pageId ? "&gid=" + pageId : "" }` )
                   .then(res => res.text())
                   .then(text => {
                       return JSON.parse(text.substr(47).slice(0, -2));
