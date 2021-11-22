@@ -1,6 +1,6 @@
 {
   "name": "comfysheets",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "The Comfiest Way to Read from Google Sheets and Submit to Google Forms so that you can sleep soundly at night!",
   "main": "index.js",
   "scripts": {
