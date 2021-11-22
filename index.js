@@ -34,23 +34,23 @@ async function getDataFromSheet( sheetId, sheetTitle, columnMap, pageId = null )
       const cols = worksheetJson.table.cols;
       const rows = worksheetJson.table.rows;
       let data = rows.map( (r) => {
-        console.log( r.c );
+        // console.log( r.c );
         let entry = {
           // date: new Date( ( r.Timestamp - ( 25567 + 1 ) ) * 86400 * 1000 ), // CodingGarden: (Looking up StackOverflow) This is whats happening: 1. Subtract number of days between Jan 1, 1900 and Jan 1, 1970, plus 1 (Google "excel leap year bug") 2. Convert to milliseconds.
         };
         cols.forEach( ( c, i ) => {
           const columnName = c.label;
           try {
-            console.log( r.c[ i ].v );
+            // console.log( r.c[ i ] ? r.c[ i ].v : r.c[ i ] );
             if( columnName === "Timestamp" ) {
               // Parse the time!
               entry.date = new Date( r.c[ i ].f );
             }
             else {
                   if( columnMap[ columnName ] ) {
-                    entry[ columnMap[ columnName ] ] = r.c[ i ].v;
+                    entry[ columnMap[ columnName ] ] = r.c[ i ] ? r.c[ i ].v : "";
                   }
-                  else {
+                  else if( r.c[ i ] !== null && r.c[ i ].v !== null ) {
                     entry[ columnName ] = r.c[ i ].v;
                   }
             }
