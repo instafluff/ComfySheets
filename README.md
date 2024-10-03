@@ -15,7 +15,11 @@ We built this module for easily submitting to Google Forms and reading from Goog
 
 ## Instructions ##
 
-TODO!!
+Based on https://ben.page/google-sheets-json
+
+1. The first row of your spreadsheet should be headers, and the rest is data under those headers (see example).
+2. Share the spreadsheet so anyone can see it (“Share” button in top right corner > “Anyone on the internet with this link can view”).
+3. Take the sheetId part of the URL like `1rGWoJd4utybt1wNPAWVrYmjnNKgSkQ_8nTd-54QtfGM` part of the link https://docs.google.com/spreadsheets/d/1rGWoJd4utybt1wNPAWVrYmjnNKgSkQ_8nTd-54QtfGM/edit and then use that as the SheetID in `ComfySheets.Read()`
 
 
 ## Credits ##
